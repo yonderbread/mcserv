@@ -86,6 +86,7 @@ def install(download: ServerVersionDownload, dirpath: str, agree_eula: bool = Fa
         with requests.get(url, stream=True) as req:
             for chunk in req.iter_content(chunk_size=_ch_size):
                 progbar.update(len(chunk))
+                f.write(chunk)
         f.close()
 
     print('Done! (Downloaded ' + str(filesize / 1000000) + ' mb)')
