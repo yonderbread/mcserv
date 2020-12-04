@@ -2,7 +2,7 @@
 
 Just a little cli module I wrote when I was bored and 
 felt like making something useful. This utility will
-list vanilla Minecraft versions, give information on
+list vanilla Minecraft server versions, give information on
 individual versions, and most importantly, install
 them.
 
