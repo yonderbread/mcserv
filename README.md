@@ -8,20 +8,24 @@ them.
 
 ## Usage:
 ```
-# installation
-python -m pip install -U https://github.com/yonderbread/mcserv.git
+# ~ INSTALLATION ~
+git clone https://github.com/yonderbread/mcserv.git
+cd mcserv
+python -m pip install -r requirements.txt # installing dependencies
+python setup.py install # install mcserv package to local repo
+cd ..
+rm -rf mcserv # optional; delete git repo since it's not needed anymore
 
-# listing all versions with and without snapshots included
-mcserv list -r
-mcserv list -r -s
+# ~ LIST AVAILABLE VERSIONS ~
+mcserv list -r # releases only
+mcserv list -r -s # snapshots included
 
-# getting information about a specific version
+# ~ VIEW VERSION INFO ~
 mcserv show 1.16.4
 mcserv show 1.12.2
 
-# installing a server to a not-yet created path
-# in my home folder
-mcserv install 1.16.4 /home/me/mc_server
+# ~ SET UP SERVER FOLDER ~
+mcserv install 1.16.4 /home/me/mc_server # create 1.16.4 server folder in home directory
 # ... with eula.txt generated
-mcserv install 1.16.4 /home/me/mc_server --agree-eula
+mcserv install 1.16.4 /home/me/mc_server --agree-eula # automatically changes eula=false to eula=true in eula.txt file
 ```
